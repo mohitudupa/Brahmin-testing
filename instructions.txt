@@ -1,0 +1,13 @@
+Start your django server and mongoDB.
+
+Open model_testing.py and change the value of the host string to the ip and port the django server is running at.
+
+All the test cases are stored as dictionaries in test_data.md.
+
+When you run model_testing.py for the first time, you will be asked to enter your api auth token.
+
+Once you get to the terminal, type help to get the list of commands available for testing.
+
+Every command corresponds to the appropriate function call of the api.
+
+To change the data in the test cases, change the appropriate dictionary and save test_data.md. Now enter the command "refresh data" to load the new test cases.

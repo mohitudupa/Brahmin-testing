@@ -3,7 +3,7 @@ import json
 import os
 
 
-host = "192.168.1.200:80"
+host = "127.0.0.1:80"
 
 
 def pretty(data):
@@ -12,10 +12,24 @@ def pretty(data):
 	print("}")
 
 
-def make_call(headers, data, url):
+def make_call(headers, data, url, action):
 	print("Data sent:")
 	pretty(data)
-	r = requests.post(url = url, data = json.dumps(data), headers = headers)
+	if action != "predict" and action != "test" and action != "train":
+		r = requests.post(url = url, data = json.dumps(data), headers = headers)
+
+	elif action == "predict":
+		multipart_form_data = {'x_predict': open('x.csv', 'r')}
+		r = requests.post(url = url, files=multipart_form_data, data=data, headers={"Authorization": headers["Authorization"]})
+
+	elif action == "test":
+		multipart_form_data = {'x_test': open('x.csv', 'r'), 'y_test': open('y.csv', 'r')}
+		r = requests.post(url = url, files=multipart_form_data, data=data, headers={"Authorization": headers["Authorization"]})
+
+	elif action == "train":
+		multipart_form_data = {'x_train': open('x.csv', 'r'), 'y_train': open('y.csv', 'r')}
+		r = requests.post(url = url, files=multipart_form_data, data=data, headers={"Authorization": headers["Authorization"]})
+
 	print("Result:", r)
 	pretty(r.json())
 
@@ -60,7 +74,7 @@ def main():
 			continue
 		if x in tada:
 			print("case:", x)
-			make_call(headers, tada[x]["data"], "http://" + host + tada[x]["url"])
+			make_call(headers, tada[x]["data"], "http://" + host + tada[x]["url"], x)
 			print()
 		else:
 			print("Invalid action:", x)

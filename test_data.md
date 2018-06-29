@@ -1,124 +1,164 @@
 {
 	"get token": {
 		"url": "/model/api/gettoken/",
+		"auto": True,
 		"data": {
-					"username": "user",
-					"password": "password",
+					"username": "mohit",
+					"password": "i am root",
 		}
 	},
 	"change password": {
 		"url": "/model/api/changepassword/",
+		"auto": True,
 		"data": {
-					"old_password": "old password",
-					"new_password": "new password",
+					"old_password": "i am mohit",
+					"new_password": "i am root",
 		}
 	},
 	"change token": {
 		"url": "/model/api/changetoken/",
+		"auto": True,
 		"data": {
-					"username": "user",
-					"password": "password",
+					"username": "mohit",
+					"password": "i am root",
 		}
 	},
 	"get details": {
 		"url": "/model/api/getdetails/",
+		"auto": True,
 		"data": {
-					"trash": "False",
+					"trash": False,
 		}
 	},
 	"get names": {
 		"url": "/model/api/getnames/",
+		"auto": True,
 		"data": {
-					"trash": "False",
+					"trash": False,
 		}
 	},
 	"get versions": {
 		"url": "/model/api/getversions/",
+		"auto": True,
 		"data": {
-					"name": "Stock - MSFT",
-					"trash": "False"
+					"name": "Iris Dataset",
+					"trash": False
 		}
 	},
 	"get instances": {
 		"url": "/model/api/getinstances/",
+		"auto": True,
 		"data": {
-					"name": "Stock - MSFT",
-					"version": "1.2",
-					"trash": "False"
+					"name": "Iris Dataset",
+					"version": "1.0",
+					"trash": False
 		}
 	},
 	"get model": {
 		"url": "/model/api/getmodel/",
+		"auto": True,
 		"data": {
-					"id": "5aeb2062da12b5004c979788"
+					"id": "5b3288e1da12b51608816dd5"
 		}
 	},
 	"get log": {
 		"url": "/model/api/getlog/",
+		"auto": True,
 		"data": {
-					"id": "5aeb2062da12b5004c979788"
+					"id": "5b3288e1da12b51608816dd5"
+		}
+	},
+	"get user log": {
+		"auto": True,
+		"url": "/model/api/getuserlog/",
+		"data": {}
+	},
+	"get date log": {
+		"auto": True,
+		"url": "/model/api/getdatelog/",
+		"data": {
+					"date": "27-06-2018"
 		}
 	},
 	"delete": {
+		"auto": True,
 		"url": "/model/api/delete/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788"
+					"id": "5b3288e1da12b51608816dd5"
 		}
 	},
 	"restore": {
+		"auto": True,
 		"url": "/model/api/restore/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788"
+					"id": "5b3288e1da12b51608816dd5"
 		}
 	},
 	"clone": {
+		"auto": True,
 		"url": "/model/api/clone/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788"
+					"id": "5b3288e1da12b51608816dd5"
 		}
 	},
 	"upload": {
+		"auto": True,
 		"url": "/model/api/upload/",
 		"data": {
-					"name": "Stock - MSFT",
-					"version": "1.3",
-					"pickle" :"gANjc2tsZWFybi5saW5lYXJfbW9kZWwuYmFzZQpMaW5lYXJSZWdyZXNzaW9uCnEAKYFxAX1xAihYDQAAAGZpdF9pbnRlcmNlcHRxA4hYCQAAAG5vcm1hbGl6ZXEEiVgGAAAAY29weV9YcQWIWAYAAABuX2pvYnNxBkr/////WAUAAABjb2VmX3EHY251bXB5LmNvcmUubXVsdGlhcnJheQpfcmVjb25zdHJ1Y3QKcQhjbnVtcHkKbmRhcnJheQpxCUsAhXEKQwFicQuHcQxScQ0oSwFLBIVxDmNudW1weQpkdHlwZQpxD1gCAAAAZjhxEEsASwGHcRFScRIoSwNYAQAAADxxE05OTkr/////Sv////9LAHRxFGKJQyCMpxU1rgvwPzN6k28pBII/UHvpsHL7ib873PxR1IQQvnEVdHEWYlgJAAAAX3Jlc2lkdWVzcRdjbnVtcHkuY29yZS5tdWx0aWFycmF5CnNjYWxhcgpxGGgSQwhj6yiOHHK0QHEZhnEaUnEbWAUAAAByYW5rX3EcSwRYCQAAAHNpbmd1bGFyX3EdaAhoCUsAhXEeaAuHcR9ScSAoSwFLBIVxIWgSiUMgzzO96i8M50GdffQw7yOVQL5KiPcoAmNAVoIJyV6gW0BxInRxI2JYCgAAAGludGVyY2VwdF9xJGgYaBJDCACYGCqGpqY/cSWGcSZScSdYEAAAAF9za2xlYXJuX3ZlcnNpb25xKFgGAAAAMC4xOC4ycSl1Yi4=",
-					"private": "True",
-					"docs": "This was uploaded via testing software"
+					"name": "Iris Dataset",
+					"version": "1.0",
+					"pickle" :"gANjc2tsZWFybi5saW5lYXJfbW9kZWwuYmFzZQpMaW5lYXJSZWdyZXNzaW9uCnEAKYFxAX1xAihYDQAAAGZpdF9pbnRlcmNlcHRxA4hYCQAAAG5vcm1hbGl6ZXEEiVgGAAAAY29weV9YcQWIWAYAAABuX2pvYnNxBkr/////WAUAAABjb2VmX3EHY251bXB5LmNvcmUubXVsdGlhcnJheQpfcmVjb25zdHJ1Y3QKcQhjbnVtcHkKbmRhcnJheQpxCUsAhXEKQwFicQuHcQxScQ0oSwFLBIVxDmNudW1weQpkdHlwZQpxD1gCAAAAZjhxEEsASwGHcRFScRIoSwNYAQAAADxxE05OTkr/////Sv////9LAHRxFGKJQyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEVdHEWYlgJAAAAX3Jlc2lkdWVzcRdoCGgJSwCFcRhoC4dxGVJxGihLAUsAhXEbaBKJQwBxHHRxHWJYBQAAAHJhbmtfcR5LAFgJAAAAc2luZ3VsYXJfcR9oCGgJSwCFcSBoC4dxIVJxIihLAUsBhXEjaBKJQwgAAAAAAAAAAHEkdHElYlgKAAAAaW50ZXJjZXB0X3EmY251bXB5LmNvcmUubXVsdGlhcnJheQpzY2FsYXIKcSdoEkMIAAAAAAAA8D9xKIZxKVJxKlgQAAAAX3NrbGVhcm5fdmVyc2lvbnErWAYAAAAwLjE4LjJxLHViLg==",
+					"private": True,
+					"docs": "This is the first model upload"
 		}
 	},
 	"update": {
+		"auto": True,
 		"url": "/model/api/update/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788",
-					"new_name": "Stock - MSFT",
-					"new_version": "1.2",
-					"new_pickle": "gANjc2tsZWFybi5saW5lYXJfbW9kZWwuYmFzZQpMaW5lYXJSZWdyZXNzaW9uCnEAKYFxAX1xAihYDQAAAGZpdF9pbnRlcmNlcHRxA4hYCQAAAG5vcm1hbGl6ZXEEiVgGAAAAY29weV9YcQWIWAYAAABuX2pvYnNxBkr/////WAUAAABjb2VmX3EHY251bXB5LmNvcmUubXVsdGlhcnJheQpfcmVjb25zdHJ1Y3QKcQhjbnVtcHkKbmRhcnJheQpxCUsAhXEKQwFicQuHcQxScQ0oSwFLBIVxDmNudW1weQpkdHlwZQpxD1gCAAAAZjhxEEsASwGHcRFScRIoSwNYAQAAADxxE05OTkr/////Sv////9LAHRxFGKJQyCMpxU1rgvwPzN6k28pBII/UHvpsHL7ib873PxR1IQQvnEVdHEWYlgJAAAAX3Jlc2lkdWVzcRdjbnVtcHkuY29yZS5tdWx0aWFycmF5CnNjYWxhcgpxGGgSQwhj6yiOHHK0QHEZhnEaUnEbWAUAAAByYW5rX3EcSwRYCQAAAHNpbmd1bGFyX3EdaAhoCUsAhXEeaAuHcR9ScSAoSwFLBIVxIWgSiUMgzzO96i8M50GdffQw7yOVQL5KiPcoAmNAVoIJyV6gW0BxInRxI2JYCgAAAGludGVyY2VwdF9xJGgYaBJDCACYGCqGpqY/cSWGcSZScSdYEAAAAF9za2xlYXJuX3ZlcnNpb25xKFgGAAAAMC4xOC4ycSl1Yi4=",
-					"new_private": "True",
-					"new_docs": "This is an update to version 1.2"
+					"id": "5b3288e1da12b51608816dd5",
+					"new_name": "Iris test clone",
+					"new_version": "2.0",
+					"description": "Some update description",
+					"new_private": True,
+					"new_docs": "This is a clone of version 1.2"
 		}
 	},
-	"train": {
-		"url": "/model/api/train/",
+	"commit": {
+		"auto": False,
+		"url": "/model/api/commit/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788",
-					"x_train": "[[  8.71800000e+01,   3.87703602e+00,  -2.59217877e+00,   4.21593970e+07],  [  9.37800000e+01, 3.83877159e+00,   3.49851010e+00,   5.50311490e+07]]",
-					"y_train": "[ 87.49930404538524, 94.02814172489931 ]"
+					"id": "5b3288e1da12b51608816dd5",
+					"description": "First commit",
 		}
 	},
-	"test": {
-		"url": "/model/api/test/",
+	"discard": {
+		"auto": True,
+		"url": "/model/api/discard/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788",
-					"x_test": "[[  8.71800000e+01,   3.87703602e+00,  -2.59217877e+00,   4.21593970e+07],  [  9.37800000e+01, 3.83877159e+00,   3.49851010e+00,   5.50311490e+07]]",
-					"y_test": "[ 87.49930404538524, 94.02814172489931 ]"
+					"id": "5b3288e1da12b51608816dd5"
 		}
 	},
-	"predict": {
-		"url": "/model/api/predict/",
+	"get traceback": {
+		"auto": True,
+		"url": "/model/api/gettraceback/",
 		"data": {
-					"id": "5aeb2062da12b5004c979788",
-					"x_predict": "[[  8.71800000e+01,   3.87703602e+00,  -2.59217877e+00,   4.21593970e+07],  [  9.37800000e+01, 3.83877159e+00,   3.49851010e+00,   5.50311490e+07]]"
+					"id": "5b3288e1da12b51608816dd5"
+		}
+	},
+	"rollback": {
+		"auto": True,
+		"url": "/model/api/rollback/",
+		"data": {
+					"id": "5b3288e1da12b51608816dd5",
+					"index": 0,
+		}
+	},
+	"get status": {
+		"auto": True,
+		"url": "/model/api/getstatus/",
+		"data": {
+					"id": "5b3288e1da12b51608816dd5",
 		}
 	},
 }

@@ -3,8 +3,7 @@ import json
 import os
 
 
-host = "127.0.0.1:8000"
-
+host = "192.168.1.200:80"
 
 instance_id = 0
 
@@ -189,17 +188,37 @@ def pretty(data):
 	print("}")
 
 
+def login():
+	global headers
+	data = {}
+	data["username"] = input("username (<class> 'str'): ")
+	data["password"] = input("password (<class> 'str'): ")
+	url = "http://" + host + "/model/api/gettoken/"
+	r = requests.post(url=url, data=json.dumps(data), headers={"content-type": "application/json"})
+	if str(r)[-5: -2] == "200":
+		if "token" in dict(r.json()):
+			f = open("header_data.md", "w")
+			f.write(dict(r.json())["token"])
+			f.close()
+			return True
+	print("error")
+	return False
+
+
+
 def read_header_data():
 	headers = {"content-type": "application/json"}
 	try:
 		f = open("header_data.md", "r")
 		headers["Authorization"] = "token " + f.read().strip()
+		f.close()
 	except FileNotFoundError:
-		x = input("Enrter Auth token (<class> 'str'): ").strip()
-		f = open("header_data.md", "w")
-		f.write(x)
-		headers["Authorization"] = "token " + x
-	f.close()
+		if not login():
+			print("Invalid username or password.")
+			exit()
+		f = open("header_data.md", "r")
+		headers["Authorization"] = "token " + f.read().strip()
+		f.close()
 	return headers
 
 

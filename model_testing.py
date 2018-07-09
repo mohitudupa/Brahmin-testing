@@ -182,11 +182,6 @@ ml = {
 	},
 }
 
-def pretty(data):
-	print("{")
-	[print("\t", i, ":", data[i]) for i in data]
-	print("}")
-
 
 def login():
 	global headers
@@ -246,14 +241,14 @@ def do_json_action(headers, keytype, url):
 			data[key] = keytype[key](input(str(key) + " (" + str(keytype[key]) + ")" + ": "))
 
 	print("Data sent:")
-	pretty(data)
+	print(json.dumps(data, indent=4, sort_keys=True))
 	
 	r = requests.post(url=url, data=json.dumps(data), headers=headers)
 	
 	print("Result:", str(r)[-5: -2])
 	
 	if str(r)[-5: -2] == "200":
-		pretty(r.json())
+		print(json.dumps(r.json(), indent=4, sort_keys=True))
 	else:
 		print("error")
 
@@ -263,6 +258,7 @@ def do_form_action(headers, keytype, url):
 	data ={"id": get_instance_id()}
 
 	files = {}
+	file_data = {}
 
 	for key in keytype.keys():
 		if key == "split":
@@ -270,17 +266,18 @@ def do_form_action(headers, keytype, url):
 		else:
 			file_name = input("Enter file for " + key + ": ")
 			files[key] = open(file_name, "r")
+			file_data[key] = str(files[key])
 
 	print("Data sent:")
-	pretty(data)
+	print(json.dumps(data, indent=4, sort_keys=True))
 	print("Files sent:")
-	pretty(files)	
+	print(json.dumps(file_data, indent=4, sort_keys=True))
 	r = requests.post(url=url, files=files, data=data, headers={"Authorization": headers["Authorization"]})
 	
 	print("Result:", str(r)[-5: -2])
 	
 	if str(r)[-5: -2] == "200":
-		pretty(r.json())
+		print(json.dumps(r.json(), indent=4, sort_keys=True))
 	else:
 		print("error")
 

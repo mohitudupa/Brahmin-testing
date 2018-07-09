@@ -3,24 +3,24 @@
 		"url": "/model/api/gettoken/",
 		"auto": True,
 		"data": {
-					"username": "mohit",
-					"password": "i am root",
+					"username": "Your_user_name",
+					"password": "Your_password",
 		}
 	},
 	"change password": {
 		"url": "/model/api/changepassword/",
 		"auto": True,
 		"data": {
-					"old_password": "i am mohit",
-					"new_password": "i am root",
+					"old_password": "Old_password",
+					"new_password": "New_password",
 		}
 	},
 	"change token": {
 		"url": "/model/api/changetoken/",
 		"auto": True,
 		"data": {
-					"username": "mohit",
-					"password": "i am root",
+					"username": "Your_user_name",
+					"password": "Your_password",
 		}
 	},
 	"get details": {

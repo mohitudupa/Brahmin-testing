@@ -293,9 +293,10 @@ def main():
 		x = input("> ")
 		if x == "help":
 			print("List of commands")
+			print("change model")
 			for i in tada:
 				print(i)
-				print("change model")
+			print("^C")
 		elif x == "change model":
 			change_model()
 		elif x in tada:

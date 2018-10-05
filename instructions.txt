@@ -11,3 +11,15 @@ Once you get to the terminal, type help to get the list of commands available fo
 Every command corresponds to the appropriate function call of the api.
 
 To change the data in the test cases, change the appropriate dictionary and save test_data.md. Now enter the command "refresh data" to load the new test cases.
+
+
+
+
+Special commands for intereacting with the API testing program
+Commands:
+============================================================================================================
+*	help : Lists all the commands available in the api
+============================================================================================================
+*	change model : Enter the model ID after entering this command. The newly entered model ID will
+	be autofilled for all api calls using it
+============================================================================================================

@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-import gnureadline
+# import gnureadline
 
 
 host = "127.0.0.1:8000"
@@ -150,45 +150,6 @@ tada = {
         "url": "/model/api/getresult/",
         "data": {
                     "model_id": str,
-        }
-    },
-    "clone template": {
-        "url": "/model/api/clonetemplate/",
-        "data": {
-                    "template_id": str,
-        }
-    },
-    "upload template": {
-        "url": "/model/api/uploadtemplate/",
-        "data": {
-                    "name": str,
-                    "docs": str,
-                    "data": dict,
-        }
-    },
-    "edit template": {
-        "url": "/model/api/edittemplate/",
-        "data": {
-                    "template_id": str,
-                    "new_name": str,
-                    "new_docs": str,
-                    "new_data": dict,
-        }
-    },
-    "delete template": {
-        "url": "/model/api/deletetemplate/",
-        "data": {
-                    "template_id": str,
-        }
-    },
-    "get template details": {
-        "url": "/model/api/gettemplatedetails/",
-        "data": {}
-    },
-    "get template": {
-        "url": "/model/api/gettemplate/",
-        "data": {
-                    "template_id": str,
         }
     },
     "get attribute": {
